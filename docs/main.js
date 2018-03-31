@@ -12,12 +12,13 @@ var gph =  mph / hiway_mpg;
 var hiway_load = (gph / hiway_rpm) / .5;
 var full_load_idle = hiway_load * idle_rpm;
 var part_load_idle = full_load_idle * .27;
-
+var cost_per_hour = part_load_idle / document.getElementById("field4").value;
 // console.log(gph);
 // console.log(hiway_load);
 // console.log(full_load_idle);
-console.log(part_load_idle);
+// console.log(part_load_idle);
 
   document.getElementById("gph").innerHTML = part_load_idle;
+  document.getElementById("cost_per_hour").innerHTML = cost_per_hour;
 
 }
