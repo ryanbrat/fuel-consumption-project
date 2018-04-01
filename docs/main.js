@@ -15,6 +15,9 @@ function myFunction() {
   var part_load_idle = full_load_idle * .27;
   var cost_per_hour = fuel_cost * part_load_idle;
 
+  part_load_idle = part_load_idle.toFixed(2);
+  cost_per_hour = cost_per_hour.toFixed(2);
+
   // console.log(gph);
   // console.log(hiway_load);
   // console.log(full_load_idle);
